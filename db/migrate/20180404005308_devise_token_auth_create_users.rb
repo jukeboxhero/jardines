@@ -40,8 +40,8 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.1]
       t.string :nickname
       t.string :email
       t.string :phone
-      t.references :image_id, foreign_key: true
-      t.integer :role
+      t.references :image, foreign_key: true
+      t.integer :role, default: 0
 
       ## Tokens
       t.text :tokens

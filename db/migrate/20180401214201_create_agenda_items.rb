@@ -5,7 +5,7 @@ class CreateAgendaItems < ActiveRecord::Migration[5.1]
       t.references :meeting
       t.references :owner, foreign_key: {to_table: :users}
       t.integer :item_type, default: 1
-      t.big_int :duration
+      t.bigint :duration
       t.integer :order
 
       t.timestamps

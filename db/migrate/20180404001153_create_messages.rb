@@ -5,6 +5,7 @@ class CreateMessages < ActiveRecord::Migration[5.1]
       t.string :subject, null: false
       t.string :body, null: false
       t.references :parent_id, foreign_key: {to_table: :messages}
+      t.references :messagable, polymorphic: true, index: true
 
       t.timestamps
     end
