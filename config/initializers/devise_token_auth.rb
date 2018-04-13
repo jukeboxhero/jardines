@@ -1,9 +1,25 @@
+# https://github.com/lynndylanhurley/devise_token_auth/issues/82#issuecomment-344461078
+Rails.application.config.to_prepare do
+  DeviseTokenAuth::OmniauthCallbacksController.class_eval do
+    def assign_provider_attrs(user, auth_hash)
+      all_attrs = auth_hash['info'].slice(*user.attributes.keys)
+      orig_val = ActionController::Parameters.permit_all_parameters
+      ActionController::Parameters.permit_all_parameters = true
+      permitted_attrs = ActionController::Parameters.new(all_attrs)
+      permitted_attrs.permit({})
+      return_val = user.assign_attributes(permitted_attrs)
+      ActionController::Parameters.permit_all_parameters = orig_val
+      return return_val
+    end
+  end
+end
+
 DeviseTokenAuth.setup do |config|
   # By default the authorization headers will change after each request. The
   # client is responsible for keeping track of the changing tokens. Change
   # this to false to prevent the Authorization header from changing after
   # each request.
-  # config.change_headers_on_each_request = true
+  config.change_headers_on_each_request = false
 
   # By default, users will need to re-authenticate after 2 weeks. This setting
   # determines how long tokens will remain valid after they are issued.

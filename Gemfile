@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -20,6 +21,8 @@ gem 'shrine', '~> 2.10.0'
 
 # authentication
 gem 'devise_token_auth'
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
 # authorization
 gem "cancan"
 
@@ -34,7 +37,7 @@ gem "cancan"
 # gem 'capistrano-rails', group: :development
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
