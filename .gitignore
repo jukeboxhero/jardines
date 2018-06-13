@@ -21,3 +21,4 @@
 localhost.*
 
 .byebug_history
+.env
