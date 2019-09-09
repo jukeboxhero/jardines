@@ -20,7 +20,7 @@ gem 'puma', '~> 3.7'
 gem 'shrine', '~> 2.10.0'
 
 # authentication
-gem 'devise_token_auth'
+gem 'devise_token_auth', '>= 1.1.2'
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 # authorization
