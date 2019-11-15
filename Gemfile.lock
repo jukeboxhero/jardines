@@ -113,7 +113,8 @@ GEM
     orm_adapter (0.5.0)
     puma (3.11.3)
     rack (2.0.4)
-    rack-cors (1.0.2)
+    rack-cors (1.0.6)
+      rack (>= 1.6.0)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -185,7 +186,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-google-oauth2
   puma (~> 3.7)
-  rack-cors
+  rack-cors (>= 1.0.5)
   rails (~> 5.1.4)
   shrine (~> 2.10.0)
   spring
@@ -194,4 +195,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
