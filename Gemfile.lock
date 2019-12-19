@@ -112,7 +112,7 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     puma (3.11.3)
-    rack (2.0.4)
+    rack (2.0.8)
     rack-cors (1.0.2)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
