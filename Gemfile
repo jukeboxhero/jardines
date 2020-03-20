@@ -5,10 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', '>= 2.2.2', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'jsonapi-resources', '~> 0.9.0'
 
 # Use sqlite3 as the database for Active Record
@@ -20,7 +20,7 @@ gem 'puma', '~> 3.7'
 gem 'shrine', '~> 2.10.0'
 
 # authentication
-gem 'devise_token_auth'
+gem 'devise_token_auth', '>= 0.1.43'
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 # authorization
