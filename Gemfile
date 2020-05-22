@@ -14,7 +14,7 @@ gem 'jsonapi-resources', '~> 0.9.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12', '>= 3.12.6'
 
 # File uploads
 gem 'shrine', '~> 2.10.0'
