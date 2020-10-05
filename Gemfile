@@ -17,7 +17,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 
 # File uploads
-gem 'shrine', '~> 2.10.0'
+gem 'shrine', '~> 3.3.0'
 
 # authentication
 gem 'devise_token_auth'
