@@ -21,8 +21,8 @@ gem 'shrine', '~> 2.10.0'
 
 # authentication
 gem 'devise_token_auth'
-gem "omniauth-facebook"
-gem "omniauth-google-oauth2"
+gem "omniauth-facebook", ">= 6.0.0"
+gem "omniauth-google-oauth2", ">= 0.5.4"
 # authorization
 gem "cancan"
 
